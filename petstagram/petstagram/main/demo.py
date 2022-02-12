@@ -1,0 +1,1 @@
+print(max([len(el) for el in ['Male', 'Female', 'Do not show']]))
