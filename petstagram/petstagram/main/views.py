@@ -2,7 +2,10 @@ from django.shortcuts import render
 
 
 def show_home(request):
-    return render(request, 'home_page.html')
+    context = {
+        'hide_additional_nav_items': True,
+    }
+    return render(request, 'home_page.html', context)
 
 
 def show_dashboard(request):
