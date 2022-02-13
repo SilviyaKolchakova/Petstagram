@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 {% block page_content %}
+    {% if pet_photos %}
+    <!-- If there are pet photos -->
+    <h1 class='text-center'>All Pet Photos</h1>
+    <div class="container mb-5">
+        <div class="row mb-5">
+    {% else %}
 <!-- If there are NO pet photos -->
     <h1 class='text-center'>No pet photos yet</h1>
     <div class=" row d-flex justify-content-center align-content-center">
         <!-- Button to Add a new Photo -->
         <a href="#" class="btn btn-lg btn-secondary row align-self-baseline">Add Photo</a>
     </div>
-
-    <!-- If there are pet photos -->
-    <h1 class='text-center'>All Pet Photos</h1>
-    <div class="container mb-5">
-        <div class="row mb-5">
-
+    {% endif %}
             <!-- First Card with Info for the Pet -->
             <div class="card ml-3 mb-3" style="width: 18rem;">
                 <!-- Image -->
